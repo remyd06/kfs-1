@@ -1,4 +1,4 @@
-ENTRY(start)
+ENTRY(_start)
 
 SECTIONS
 {
@@ -8,20 +8,20 @@ SECTIONS
 	{
 		*(.multiboot)
 		*(.text*)
-	} :RE
+	}
 
 	.rodata :
 	{
 		*(.rodata*)
-	} :R
+	}
 
 	.data :
 	{
 		*(.data*)
-	} :RW
+	}
 
 	.bss :
 	{
 		*(.bss*)
-	} :RW
+	}
 }
